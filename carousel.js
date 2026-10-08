@@ -9,7 +9,7 @@ let current=0;
 const buttons=data.map((item,index)=>{
  const button=document.createElement('button'); button.type='button';
  button.setAttribute('aria-label',`Show ${item.type==='video'?'video':'photo'} ${index+1}: ${item.caption}`);
- if(item.type==='video'){button.textContent=`▶ Video ${index+1}`;}else{const img=document.createElement('img');img.src=item.src;img.alt='';img.loading='lazy';button.append(img);}
+ if(item.type==='video'){const img=document.createElement('img');img.src=item.poster;img.alt='';img.loading='lazy';button.append(img);const badge=document.createElement('span');badge.textContent='▶';badge.className='video-badge';button.append(badge);}else{const img=document.createElement('img');img.src=item.src;img.alt='';img.loading='lazy';button.append(img);}
  button.addEventListener('click',()=>show(index));thumbs.append(button);return button;
 });
 function show(index){
