@@ -27,7 +27,7 @@ window.ebikeMedia = [
   {
     "type": "image",
     "src": "images/electric-bike/IMG_2624.jpg",
-    "caption": "Motor controller and wiring before installation."
+    "caption": "Custom charging unit built by our team."
   },
   {
     "type": "image",
