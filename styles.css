@@ -153,3 +153,30 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Rhithvik portfolio: mobile layout, project cards, and accessibility. */
+html { scroll-behavior: smooth; }
+header { position: static; padding: 46px 0 30px; }
+header h1 { font-size: clamp(1.8rem, 5vw, 3rem); }
+nav ul { flex-wrap: wrap; gap: 8px; }
+nav ul li { margin: 0; }
+nav ul li a { display: block; color: #b9e1ff; }
+section { padding: 48px 0; scroll-margin-top: 20px; }
+section h2::after { margin: 10px 0; }
+#projects { background: #eaf0f4; }
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 28px; }
+.project { background: white; padding: 28px; border-radius: 8px; border-top: 3px solid #2980b9; }
+.project h3 { color: #2c3e50; font-size: 1.45rem; margin: 8px 0 16px; line-height: 1.3; }
+p.eyebrow { font-size: .78rem; font-weight: 700; letter-spacing: .07em; color: #24658e; }
+.button { display: inline-block; background: #2c3e50; color: white; padding: 12px 22px; border-radius: 5px; margin-top: 12px; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 3px solid #d78400; outline-offset: 5px; }
+#education ul li:hover, #skills ul li:hover { transform: none; }
+footer p { color: #fff; }
+footer a { color: #b9e1ff; }
+footer .credit { font-size: .9rem; margin-top: 8px; }
+#contact a { overflow-wrap: anywhere; }
+.skip { position: absolute; top: -100px; left: 15px; background: white; padding: 12px; z-index: 2000; }
+.skip:focus { top: 10px; }
+@media (max-width: 640px) { .project-grid { grid-template-columns: 1fr; } section { padding: 32px 0; } section h2 { font-size: 2rem; } nav ul li a { padding: 8px 10px; } .project { padding: 22px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
